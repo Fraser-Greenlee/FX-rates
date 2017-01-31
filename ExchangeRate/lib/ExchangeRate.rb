@@ -70,15 +70,15 @@ module ExchangeRate
 				if ratesOnDay.key?(base) then
 					baseV = ratesOnDay[base]
 				else
-					return "Error: No values found for "+base
+					return "No values found for "+base
 				end
 				if ratesOnDay.key?(counter) then
 					counterV = ratesOnDay[counter]
 				else
-					return "Error: No values found for "+counter
+					return "No values found for "+counter
 				end
 			else
-				return "Error: No values found for "+date
+				return "No values found for "+date
 			end
 			# return base*counter for date
 			return baseV/counterV
