@@ -1,7 +1,6 @@
 PATH
   remote: ExchangeRate
   specs:
-    ExchangeRate (0.1.0)
 
 GEM
   remote: https://rubygems.org/
