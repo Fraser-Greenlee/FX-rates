@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>FX-u-like</h1>
+	<form action="">
+		<p>Date: <input name="date" type="date" value="<%= @date %>" /></p>
+		<p>Amount: <input name="amount" type="int" value="<%= @amount %>" /></p>
+		<p>
+			From: <select name="from" value="<%= @from %>">
+							<% @currencies.each do |currency| %>
+								<option value="<%= currency %>" <% if currency==@from %>selected="selected"<% end %> ><%= currency %></option>
+							<% end %>
+						<select>
+		</p>
+		<p>
+			To: 	<select name="to" value="<%= @to %>">
+							<% @currencies.each do |currency| %>
+								<option value="<%= currency %>" <% if currency==@to %>selected="selected"<% end %> ><%= currency %></option>
+							<% end %>
+						<select>
+		</p>
+		<p><input type="submit" value="Covert"></p>
+	</form>
+	<span>Result: <b><%= @result %></b></span>
+</div>
